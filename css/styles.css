@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #e3f2c1, #c2e9c7, #b3d7e6);
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #004d99;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+#titulo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, rgb(11, 230, 43), rgb(255, 255, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+#logo {
+    max-width: 150px;
+    height: 150px;
+    margin-left: 10px;
+}
+
+nav {
+    background-color: rgb(70, 70, 224);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 20px;
+}
+
+nav li {
+    flex: 1;
+    padding: 10px;
+    background-color: rgb(70, 70, 224);
+    border: 1px solid rgb(70, 70, 224);
+    text-align: center;
+    color: white;
+}
+
+nav li:hover {
+    background-color: rgb(255, 255, 255);
+    color: green;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+section {
+    width: 60%;
+}
+
+.year1, .year2, .year3 {
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    color: #333;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.year1 {
+    background: #d4e286;
+    border-left: 5px solid #9cab47;
+}
+.year2 {
+    background: #96e09e;
+    border-left: 5px solid #5a9c65;
+}
+.year3 {
+    background: #98c7e4;
+    border-left: 5px solid #4b7a9f;
+}
+
+.year1 ul, .year2 ul, .year3 ul {
+    list-style-type: square;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.year1 li, .year2 li, .year3 li {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.year1 p, .year2 p, .year3 p {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+}
+
+aside {
+    width: 35%;
+}
+
+aside div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+.contenedor1 img,
+.contenedor2 img,
+.contenedor3 img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 45px;
+}
+
+article {
+    width: 100%;
+    background: #fff3cd;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+footer {
+    background-color: #004d99;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+
+    nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    section, aside {
+        width: 90%;
+        text-align: center;
+        align-items: center;
+    }
+    section{
+        position: relative;
+        left: 48px;
+    }
+
+    aside div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+    }
+
+    .contenedor1 img, .contenedor2 img, .contenedor3 img {
+        position: static;
+        margin: 10px;
+    }
+
+    footer {
+        width: 100%;
+        text-align: center;
+    }
+}
